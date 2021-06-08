@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Sound Board</title>
+    <meta charset="UTF-8">
+    <!--lol thx w3schools for like all the css tags-->
+    <style>
+
+    @import url("https://use.typekit.net/xtl7xdj.css");
+
+        body{
+        font-family:monospace;
+        background-image: linear-gradient(to right, rgb(115, 35, 235), rgb(35, 152, 235));
+        }
+        .center{
+        text-align:center;
+
+        }
+
+        .soundbutton{
+        transition-duration:0.1s;
+        color:black;
+        padding:10px;
+        border-radius:8px;
+        text-align:center;
+        font-family:all-round-gothic, sans-serif;
+        font-weight:bolder;
+        border:2px solid black;
+        box-shadow:9px 9px black;
+        background-color:white;
+
+        }
+
+        .soundbutton:hover{
+        transition-duration:0.2s;
+        transform: translateY(1px);
+        background-color:gray;
+
+        }
+
+        .soundbutton:active{
+        transition-duration:0.1s;
+        transform: translateY(7px);
+        box-shadow:2px 2px black;
+        }
+
+        .container{
+        display:grid;
+        grid-gap:10px;
+        grid-template-columns: auto auto auto;
+        grid-auto-columns:12px;
+
+        }
+
+    </style>
+</head>
+<body>
+<audio id="samsung"> <source src="samsung.mp3" type="audio/mpeg"> </audio>
+<audio id="airhorn"> <source src="samsung.mp3" type="audio/mpeg"> </audio>
+
+
+
+
+<h1 class="center">Simple Soundboard</h1>
+<div class="container">
+    <button onclick="reloadPage()" class="soundbutton" style="background-color:red; color:black;">Stop All Sounds</button>
+    <button onclick="playSamsung()" class="soundbutton" style="">Samsung</button>
+    <button class="soundbutton" style="">Sound1</button>
+    <button class="soundbutton" style="">Sound1</button>
+    <button class="soundbutton" style="">Sound1</button>
+    <button class="soundbutton" style="">Sound1</button>
+    <button class="soundbutton" style="">Sound1</button>
+</div>
+<script>
+
+    var samsung = document.getElementById("samsung")
+    var airhorn = document.getElementById("airhorn")
+
+
+
+    function playSamsung(){
+    samsung.play();
+    }
+    function reloadPage(){
+    location.reload();
+    }
+
+</script>
+</body>
