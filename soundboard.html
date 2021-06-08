@@ -57,7 +57,11 @@
 </head>
 <body>
 <audio id="samsung"> <source src="samsung.mp3" type="audio/mpeg"> </audio>
-<audio id="airhorn"> <source src="samsung.mp3" type="audio/mpeg"> </audio>
+<audio id="bong"> <source src="bong.mp3" type="audio/mpeg"> </audio>
+<audio id="boom"> <source src="boom.mp3" type="audio/mpeg"> </audio>
+<audio id="oof"> <source src="oof.mp3" type="audio/mpeg"> </audio>
+<audio id="sheesh"> <source src="sheesh.mp3" type="audio/mpeg"> </audio>
+
 
 
 
@@ -66,21 +70,42 @@
 <div class="container">
     <button onclick="reloadPage()" class="soundbutton" style="background-color:red; color:black;">Stop All Sounds</button>
     <button onclick="playSamsung()" class="soundbutton" style="">Samsung</button>
-    <button class="soundbutton" style="">Sound1</button>
-    <button class="soundbutton" style="">Sound1</button>
-    <button class="soundbutton" style="">Sound1</button>
-    <button class="soundbutton" style="">Sound1</button>
+    <button onclick="playBong()" class="soundbutton" style="">BONG</button>
+    <button onclick="playBoom()" class="soundbutton" style="">Vine Boom</button>
+    <button onclick="playOof()" class="soundbutton" style="">OOF</button>
+    <button onclick="playSheesh()" class="soundbutton" style="">Sound1</button>
     <button class="soundbutton" style="">Sound1</button>
 </div>
 <script>
 
     var samsung = document.getElementById("samsung")
-    var airhorn = document.getElementById("airhorn")
+    var bong = document.getElementById("bong")
+    var boom = document.getElementById("boom")
+    var oof = document.getElementById("oof")
+    var sheesh = document.getElementById("sheesh")
+
 
 
 
     function playSamsung(){
+    samsung.currentTime = 0;
     samsung.play();
+    }
+    function playBong(){
+    bong.currentTime = 0;
+    bong.play();
+    }
+    function playBoom(){
+    boom.currentTime = 0;
+    boom.play();
+    }
+    function playOof(){
+    oof.currentTime = 0;
+    oof.play();
+    }
+    function playSheesh(){
+    sheesh.currentTime = 0;
+    sheesh.play();
     }
     function reloadPage(){
     location.reload();
