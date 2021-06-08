@@ -48,9 +48,19 @@
 
         .container{
         display:grid;
-        grid-gap:10px;
+        grid-gap:25px;
         grid-template-columns: auto auto auto;
-        grid-auto-columns:12px;
+        grid-template-rows:auto-fit;
+
+
+        }
+
+        #error{
+
+            visibility: hidden;
+            position: relative;
+            left: 40%;
+            top: 50px;
 
         }
 
@@ -62,6 +72,12 @@
 <audio id="boom"> <source src="boom.mp3" type="audio/mpeg"> </audio>
 <audio id="oof"> <source src="oof.mp3" type="audio/mpeg"> </audio>
 <audio id="sheesh"> <source src="sheesh.mp3" type="audio/mpeg"> </audio>
+<audio id="nice"> <source src="nice.mp3" type="audio/mpeg"> </audio>
+<audio id="nope"> <source src="nope.mp3" type="audio/mpeg"> </audio>
+<audio id="win10error"> <source src="win10error.wav" type="audio/wav"> </audio>
+<audio id="xpshutdown"> <source src="xpshutdown.mp3" type="audio/mpeg"> </audio>
+<audio id="xpstartup"> <source src="xpstartup.mp3" type="audio/mpeg"> </audio>
+
 
 
 
@@ -70,13 +86,22 @@
 <h1 class="center">Simple Soundboard</h1>
 <div class="container">
     <button onclick="reloadPage()" class="soundbutton" style="background-color:red; color:black;">Stop All Sounds</button>
-    <button onclick="playSamsung()" class="soundbutton" style="">Samsung</button>
-    <button onclick="playBong()" class="soundbutton" style="">BONG</button>
-    <button onclick="playBoom()" class="soundbutton" style="">Vine Boom</button>
-    <button onclick="playOof()" class="soundbutton" style="">OOF</button>
-    <button onclick="playSheesh()" class="soundbutton" style="">Sheesh</button>
-    <button class="soundbutton" style="">Sound1</button>
+    <button onclick="playSamsung()" class="soundbutton" >Samsung</button>
+    <button onclick="playBong()" class="soundbutton" >BONG</button>
+    <button onclick="playBoom()" class="soundbutton" >Vine Boom</button>
+    <button onclick="playOof()" class="soundbutton" >OOF</button>
+    <button onclick="playSheesh()" class="soundbutton">Sheesh</button>
+    <button onclick="playNice()" class="soundbutton">Nice</button>
+    <button onclick="playNope()" class="soundbutton">Nope</button>
+    <button onclick="playWin10()" class="soundbutton">Windows 10 Error</button>
+    <button onclick="playXpshutdown()" class="soundbutton">Windows XP Shutdown</button>
+    <button onclick="playXpstartup()" class="soundbutton">Windows XP Startup</button>
+    <button onclick="playError()" class="soundbutton">Windows XP Error</button>
+
+
+
 </div>
+<img id="error" src="error.png"> 
 <script>
 
     var samsung = document.getElementById("samsung")
@@ -84,7 +109,12 @@
     var boom = document.getElementById("boom")
     var oof = document.getElementById("oof")
     var sheesh = document.getElementById("sheesh")
-
+    var nice = document.getElementById("nice")
+    var nope = document.getElementById("nope")
+    var win10error = document.getElementById("win10error")
+    var xpshutdown = document.getElementById("xpshutdown")
+    var xpstartup = document.getElementById("xpstartup")
+    let clone = document.querySelector('#error').cloneNode( true );
 
 
 
@@ -108,6 +138,40 @@
     sheesh.currentTime = 0;
     sheesh.play();
     }
+    function playNice(){
+    nice.currentTime = 0;
+    nice.play();
+    }
+    function playNope(){
+    nope.currentTime = 0;
+    nope.play();
+    }
+    function playWin10(){
+    win10error.currentTime = 0;
+    win10error.play();
+    }
+    function playXpshutdown(){
+    xpshutdown.currentTime = 0;
+    xpshutdown.play();
+    document.body.style.background = "#000000"
+    }
+    function playXpstartup(){
+    xpstartup.currentTime = 0;
+    xpstartup.play();
+    document.body.style.background = "url('winxpstart.gif')"
+    }
+
+    function playError(){
+        document.getElementById("error").style.visibility = "visible"
+    }
+
+
+
+
+
+
+
+
     function reloadPage(){
     location.reload();
     }

@@ -1,0 +1,30 @@
+h1{
+    font-family: monospace;
+    text-align: center;
+    font-size: 50px;
+}
+
+.card{
+    align-items: center;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    font-family: monospace;
+    font-size: 30px;
+    background-size: cover;
+
+
+
+
+}
+
+.card:hover{
+    transition-duration: 0.2s;
+    background: gray;
+    transform: translateY(2px);
+    
+
+
+}
