@@ -63,6 +63,55 @@
             top: 50px;
 
         }
+        #error1{
+
+            visibility: hidden;
+            position: relative;
+            left: 25%;
+            top: 55px;
+
+        }
+        #error2{
+
+            visibility: hidden;
+            position: relative;
+            left: 20%;
+            top: 60px;
+
+        }
+        #error3{
+
+            visibility: hidden;
+            position: relative;
+            left: 15%;
+            top: 65px;
+
+        }
+        #error4{
+
+            visibility: hidden;
+            position: relative;
+            left: 10%;
+            top: 70px;
+
+        }
+        #error5{
+
+            visibility: hidden;
+            position: relative;
+            left: 5%;
+            top: 75px;
+
+        }
+        #error6{
+
+            visibility: hidden;
+            position: relative;
+            left: 50%;
+            top: 80px;
+
+        }
+    
 
     </style>
 </head>
@@ -81,6 +130,7 @@
 <audio id="letsgo"> <source src="./media/letsgo.mp3" type="audio/mpeg"> </audio>
 <audio id="yeah"> <source src="./media/yeahyeah.mp3" type="audio/mpeg"> </audio>
 <audio id="brb"> <source src="./media/brb.mp3" type="audio/mpeg"> </audio>
+<audio id="song"> <source src="./media/errorsong.mp3" type="audio/mpeg"> </audio>
 
 
 
@@ -108,7 +158,14 @@
 
 
 </div>
-<img id="error" src="./media/error.png"> 
+<img id="error" src="./media/error.png">
+<img id="error1" src="./media/error.png"> 
+<img id="error2" src="./media/error.png"> 
+<img id="error3" src="./media/error.png"> 
+<img id="error4" src="./media/error.png"> 
+<img id="error5" src="./media/error.png"> 
+<img id="error6" src="./media/error.png"> 
+<img id="car">
 <script>
 
     var samsung = document.getElementById("samsung")
@@ -125,40 +182,50 @@
     var letsgo = document.getElementById("letsgo")
     var yeah = document.getElementById("yeah")
     var brb = document.getElementById("brb")
+    var song = document.getElementById("song")
+    var count = 0
 
 
 
     function playSamsung(){
     samsung.currentTime = 0;
     samsung.play();
+    document.body.style.background = "linear-gradient(to right, rgb(115, 35, 235), rgb(35, 152, 235))"
     }
     function playBong(){
     bong.currentTime = 0;
     bong.play();
+    document.body.style.background = "linear-gradient(to right, rgb(115, 35, 235), rgb(35, 152, 235))"
     }
     function playBoom(){
     boom.currentTime = 0;
     boom.play();
+    document.body.style.background = "linear-gradient(to right, rgb(115, 35, 235), rgb(35, 152, 235))"
     }
     function playOof(){
     oof.currentTime = 0;
     oof.play();
+    document.body.style.background = "linear-gradient(to right, rgb(115, 35, 235), rgb(35, 152, 235))"
     }
     function playSheesh(){
     sheesh.currentTime = 0;
     sheesh.play();
+    document.body.style.background = "linear-gradient(to right, rgb(115, 35, 235), rgb(35, 152, 235))"
     }
     function playNice(){
     nice.currentTime = 0;
     nice.play();
+    document.body.style.background = "linear-gradient(to right, rgb(115, 35, 235), rgb(35, 152, 235))"
     }
     function playNope(){
     nope.currentTime = 0;
     nope.play();
+    document.body.style.background = "linear-gradient(to right, rgb(115, 35, 235), rgb(35, 152, 235))"
     }
     function playWin10(){
     win10error.currentTime = 0;
     win10error.play();
+    document.body.style.background = "linear-gradient(to right, rgb(115, 35, 235), rgb(35, 152, 235))"
     }
     function playXpshutdown(){
     xpshutdown.currentTime = 0;
@@ -169,7 +236,6 @@
     xpstartup.currentTime = 0;
     xpstartup.play();
     document.body.style.background = "url('./media/winxpstart.gif')"
-    document.body.style.background = "url('./media/winxpstart.gif')"
     document.body.style.backgroundRepeat = "no-repeat"
     document.body.style.backgroundSize = "cover"
     }
@@ -177,22 +243,40 @@
     function playLetsgo(){
     letsgo.currentTime = 0;
     letsgo.play();
+    document.body.style.background = "linear-gradient(to right, rgb(115, 35, 235), rgb(35, 152, 235))"
     }
 
     function playYeah(){
     yeah.currentTime = 0;
     yeah.play();
+    document.body.style.background = "linear-gradient(to right, rgb(115, 35, 235), rgb(35, 152, 235))"
     }
 
     function playBrb(){
     brb.currentTime = 0;
     brb.play();
+    document.body.style.background = "linear-gradient(to right, rgb(115, 35, 235), rgb(35, 152, 235))"
     }
 
     function playError(){
         document.getElementById("error").style.visibility = "visible"
         xperror.currentTime = 0;
         xperror.play()
+        document.body.style.backgroundRepeat = "no-repeat"
+        document.body.style.backgroundSize = "cover"
+        document.body.style.background = "url('./media/bliss.jpg')"
+        count = count + 1
+        console.log(count)
+        if (count == 30){
+            song.play()
+            document.getElementById("error1").style.visibility = "visible"
+            document.getElementById("error2").style.visibility = "visible"
+            document.getElementById("error3").style.visibility = "visible"
+            document.getElementById("error4").style.visibility = "visible"
+            document.getElementById("error5").style.visibility = "visible"
+            document.getElementById("error6").style.visibility = "visible"
+        }
+
     }
 
 
