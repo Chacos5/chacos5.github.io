@@ -1,10 +1,8 @@
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Simple Sound Board</title>
     <meta charset="UTF-8">
-    <!--lol thx w3schools for like all the css tags-->
     <style>
 
     @import url("https://use.typekit.net/xtl7xdj.css");
@@ -131,6 +129,7 @@
 <audio id="yeah"> <source src="./media/yeahyeah.mp3" type="audio/mpeg"> </audio>
 <audio id="brb"> <source src="./media/brb.mp3" type="audio/mpeg"> </audio>
 <audio id="song"> <source src="./media/errorsong.mp3" type="audio/mpeg"> </audio>
+<audio id="song2"> <source src="./media/letsgoeasteregg.mp3" type="audio/mpeg"> </audio>
 
 
 
@@ -184,6 +183,8 @@
     var brb = document.getElementById("brb")
     var song = document.getElementById("song")
     var count = 0
+    var count2 = 0
+    var song2 = document.getElementById("song2")
 
 
 
@@ -243,7 +244,18 @@
     function playLetsgo(){
     letsgo.currentTime = 0;
     letsgo.play();
-    reset()
+    if (count2 >50){
+        reset()
+    }
+    count2 = count2 + 1
+    console.log(count2)
+    if (count2 == 40){
+        document.body.style.background = "url('./media/convertible.jpg')"
+        song2.currentTime = 0;
+        song2.play()
+
+
+    }
     }
 
     function playYeah(){
@@ -292,6 +304,23 @@
 
         }
         
+    }
+
+    function playAll(){
+        playBong()
+        playBoom()
+        playBrb()
+        playError()
+        playLetsgo()
+        playNice()
+        playNope()
+        playOof()
+        playSamsung()
+        playSheesh()
+        playWin10()
+        playXpshutdown()
+        playXpstartup()
+        playYeah()
     }
 
 
