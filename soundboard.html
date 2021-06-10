@@ -190,42 +190,42 @@
     function playSamsung(){
     samsung.currentTime = 0;
     samsung.play();
-    document.body.style.background = "linear-gradient(to right, rgb(115, 35, 235), rgb(35, 152, 235))"
+    reset()
     }
     function playBong(){
     bong.currentTime = 0;
     bong.play();
-    document.body.style.background = "linear-gradient(to right, rgb(115, 35, 235), rgb(35, 152, 235))"
+    reset()
     }
     function playBoom(){
     boom.currentTime = 0;
     boom.play();
-    document.body.style.background = "linear-gradient(to right, rgb(115, 35, 235), rgb(35, 152, 235))"
+    reset()
     }
     function playOof(){
     oof.currentTime = 0;
     oof.play();
-    document.body.style.background = "linear-gradient(to right, rgb(115, 35, 235), rgb(35, 152, 235))"
+    reset()
     }
     function playSheesh(){
     sheesh.currentTime = 0;
     sheesh.play();
-    document.body.style.background = "linear-gradient(to right, rgb(115, 35, 235), rgb(35, 152, 235))"
+    reset()
     }
     function playNice(){
     nice.currentTime = 0;
     nice.play();
-    document.body.style.background = "linear-gradient(to right, rgb(115, 35, 235), rgb(35, 152, 235))"
+    reset()
     }
     function playNope(){
     nope.currentTime = 0;
     nope.play();
-    document.body.style.background = "linear-gradient(to right, rgb(115, 35, 235), rgb(35, 152, 235))"
+    reset()
     }
     function playWin10(){
     win10error.currentTime = 0;
     win10error.play();
-    document.body.style.background = "linear-gradient(to right, rgb(115, 35, 235), rgb(35, 152, 235))"
+    reset()
     }
     function playXpshutdown(){
     xpshutdown.currentTime = 0;
@@ -243,19 +243,19 @@
     function playLetsgo(){
     letsgo.currentTime = 0;
     letsgo.play();
-    document.body.style.background = "linear-gradient(to right, rgb(115, 35, 235), rgb(35, 152, 235))"
+    reset()
     }
 
     function playYeah(){
     yeah.currentTime = 0;
     yeah.play();
-    document.body.style.background = "linear-gradient(to right, rgb(115, 35, 235), rgb(35, 152, 235))"
+    reset()
     }
 
     function playBrb(){
     brb.currentTime = 0;
     brb.play();
-    document.body.style.background = "linear-gradient(to right, rgb(115, 35, 235), rgb(35, 152, 235))"
+    reset()
     }
 
     function playError(){
@@ -277,6 +277,21 @@
             document.getElementById("error6").style.visibility = "visible"
         }
 
+    }
+    function reset(){
+        console.log("Reset!")
+        document.body.style.background = "linear-gradient(to right, rgb(115, 35, 235), rgb(35, 152, 235))"
+        document.getElementById("error").style.visibility = "hidden"
+        if (count => 30){
+            document.getElementById("error1").style.visibility = "hidden"
+            document.getElementById("error2").style.visibility = "hidden"
+            document.getElementById("error3").style.visibility = "hidden"
+            document.getElementById("error4").style.visibility = "hidden"
+            document.getElementById("error5").style.visibility = "hidden"
+            document.getElementById("error6").style.visibility = "hidden"
+
+        }
+        
     }
 
 
