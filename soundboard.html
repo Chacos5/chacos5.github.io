@@ -67,16 +67,20 @@
     </style>
 </head>
 <body>
-<audio id="samsung"> <source src="samsung.mp3" type="audio/mpeg"> </audio>
-<audio id="bong"> <source src="bong.mp3" type="audio/mpeg"> </audio>
-<audio id="boom"> <source src="boom.mp3" type="audio/mpeg"> </audio>
-<audio id="oof"> <source src="oof.mp3" type="audio/mpeg"> </audio>
-<audio id="sheesh"> <source src="sheesh.mp3" type="audio/mpeg"> </audio>
-<audio id="nice"> <source src="nice.mp3" type="audio/mpeg"> </audio>
-<audio id="nope"> <source src="nope.mp3" type="audio/mpeg"> </audio>
-<audio id="win10error"> <source src="win10error.wav" type="audio/wav"> </audio>
-<audio id="xpshutdown"> <source src="xpshutdown.mp3" type="audio/mpeg"> </audio>
-<audio id="xpstartup"> <source src="xpstartup.mp3" type="audio/mpeg"> </audio>
+<audio id="samsung"> <source src="./media/samsung.mp3" type="audio/mpeg"> </audio>
+<audio id="bong"> <source src="./media/bong.mp3" type="audio/mpeg"> </audio>
+<audio id="boom"> <source src="./media/boom.mp3" type="audio/mpeg"> </audio>
+<audio id="oof"> <source src="./media/oof.mp3" type="audio/mpeg"> </audio>
+<audio id="sheesh"> <source src="./media/sheesh.mp3" type="audio/mpeg"> </audio>
+<audio id="nice"> <source src="./media/nice.mp3" type="audio/mpeg"> </audio>
+<audio id="nope"> <source src="./media/nope.mp3" type="audio/mpeg"> </audio>
+<audio id="win10error"> <source src="./media/win10error.wav" type="audio/wav"> </audio>
+<audio id="xpshutdown"> <source src="./media/xpshutdown.mp3" type="audio/mpeg"> </audio>
+<audio id="xpstartup"> <source src="./media/xpstartup.mp3" type="audio/mpeg"> </audio>
+<audio id="xperror"> <source src="./media/xperror.mp3" type="audio/mpeg"> </audio>
+<audio id="letsgo"> <source src="./media/letsgo.mp3" type="audio/mpeg"> </audio>
+<audio id="yeah"> <source src="./media/yeahyeah.mp3" type="audio/mpeg"> </audio>
+<audio id="brb"> <source src="./media/brb.mp3" type="audio/mpeg"> </audio>
 
 
 
@@ -88,7 +92,7 @@
     <button onclick="reloadPage()" class="soundbutton" style="background-color:red; color:black;">Stop All Sounds</button>
     <button onclick="playSamsung()" class="soundbutton" >Samsung</button>
     <button onclick="playBong()" class="soundbutton" >BONG</button>
-    <button onclick="playBoom()" class="soundbutton" >Vine Boom</button>
+    <button onclick="playBoom()" class="soundbutton" >Boom</button>
     <button onclick="playOof()" class="soundbutton" >OOF</button>
     <button onclick="playSheesh()" class="soundbutton">Sheesh</button>
     <button onclick="playNice()" class="soundbutton">Nice</button>
@@ -97,11 +101,14 @@
     <button onclick="playXpshutdown()" class="soundbutton">Windows XP Shutdown</button>
     <button onclick="playXpstartup()" class="soundbutton">Windows XP Startup</button>
     <button onclick="playError()" class="soundbutton">Windows XP Error</button>
+    <button onclick="playLetsgo()" class="soundbutton">Lets Go</button>
+    <button onclick="playYeah()" class="soundbutton">Yeah Yeah</button>
+    <button onclick="playBrb()" class="soundbutton">BRB</button>
 
 
 
 </div>
-<img id="error" src="error.png"> 
+<img id="error" src="./media/error.png"> 
 <script>
 
     var samsung = document.getElementById("samsung")
@@ -114,7 +121,10 @@
     var win10error = document.getElementById("win10error")
     var xpshutdown = document.getElementById("xpshutdown")
     var xpstartup = document.getElementById("xpstartup")
-    let clone = document.querySelector('#error').cloneNode( true );
+    var xperror = document.getElementById("xperror")
+    var letsgo = document.getElementById("letsgo")
+    var yeah = document.getElementById("yeah")
+    var brb = document.getElementById("brb")
 
 
 
@@ -158,11 +168,31 @@
     function playXpstartup(){
     xpstartup.currentTime = 0;
     xpstartup.play();
-    document.body.style.background = "url('winxpstart.gif')"
+    document.body.style.background = "url('./media/winxpstart.gif')"
+    document.body.style.background = "url('./media/winxpstart.gif')"
+    document.body.style.backgroundRepeat = "no-repeat"
+    document.body.style.backgroundSize = "cover"
+    }
+
+    function playLetsgo(){
+    letsgo.currentTime = 0;
+    letsgo.play();
+    }
+
+    function playYeah(){
+    yeah.currentTime = 0;
+    yeah.play();
+    }
+
+    function playBrb(){
+    brb.currentTime = 0;
+    brb.play();
     }
 
     function playError(){
         document.getElementById("error").style.visibility = "visible"
+        xperror.currentTime = 0;
+        xperror.play()
     }
 
 
